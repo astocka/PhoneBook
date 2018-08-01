@@ -1,0 +1,45 @@
+﻿@model PhoneBook.Models.PersonModel
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="display-4">Please confirm delete of the entry:</p>
+                <div class="clearfix">
+                </div>
+                <div class="col-sm-12">
+                    <table class="table table-striped table-bordered table-responsive-sm">
+                        <thead class="bg-warning">
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Created</th>
+                                <th>Updated</th>
+                                <th colspan="2">Change entry</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@string.Format("{0:0000}", Model.ID)</td>
+                                <td>@Model.FirstName</td>
+                                <td>@Model.LastName</td>
+                                <td>@Model.Phone</td>
+                                <td>@Model.Email</td>
+                                <td>@Model.Created</td>
+                                <td>@Model.Updated</td>
+                                <td>
+                                    <form method="post" action="/Person/RemoveConfirm/?id=@ViewBag.ToRemoveId">
+                                        <input type="submit" value="Delete" class="btn btn-danger" />
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model PhoneBook.Models.PersonModel
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="display-4 text-left">Edit an entry</p>
+                <form asp-action="Edit" method="post">
+
+                    <div>
+                        <input type="hidden" asp-for="ID" value="@ViewBag.ToEditID">
+                    </div>
+
+                    <div class="form-group row col-sm-6">
+                        <label asp-for="FirstName"></label>
+                        <input asp-for="FirstName" class="form-control" placeholder="First name" />
+                        <span asp-validation-for="FirstName"></span>
+                    </div>
+                    <div class="form-group row col-sm-6">
+                        <label asp-for="LastName"></label>
+                        <input asp-for="LastName" class="form-control" placeholder="Last name" />
+                        <span asp-validation-for="LastName"></span>
+                    </div>
+
+                    <div class="form-group row col-sm-6">
+                        <label asp-for="Phone"></label>
+                        <input asp-for="Phone" class="form-control" placeholder="Phone number" />
+                        <span asp-validation-for="Phone"></span>
+                    </div>
+
+                    <div class="form-group row col-sm-6">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Email address" />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+
+                    <div class="form-group row col-sm-6">
+                        <input type="submit" value="save" class="btn btn-success" />
+                    </div>
+                </form>
+                <div class="col-sm-12 text-left">
+                    @TempData["edited"]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

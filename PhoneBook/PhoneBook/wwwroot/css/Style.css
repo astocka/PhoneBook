@@ -1,0 +1,53 @@
+﻿/* DATA VALIDATION */
+
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+/* INDEX BACKGROUND */
+
+.index-bgr {
+    background-image: url("../images/pexels-photo-733852l.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.index-cover {
+    background-color: rgba(192, 192, 192, 0.45);
+}
+
+/* PAGINATION */
+
+.pagination > li > a {
+    background-color: white;
+    color: black;
+}
+
+    .pagination > li > a:focus,
+    .pagination > li > a:hover,
+    .pagination > li > span:focus,
+    .pagination > li > span:hover {
+        color: black;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+.pagination > .active > a {
+    color: white;
+    background-color: black;
+    border: solid 1px black;
+}
+
+    .pagination > .active > a:hover {
+        background-color: black;
+        border: solid 1px black;
+    }

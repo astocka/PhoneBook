@@ -1,0 +1,27 @@
+﻿@model PhoneBook.Models.PersonModel
+
+<div class="jumbotron index-bgr">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row index-cover">
+            <div class="form-group col-sm-12">
+                <p class="display-4">Find a person</p>
+                <form asp-action="Index" method="post">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" placeholder="Write last name here">
+                    <span asp-validation-for="LastName"></span>
+                    <button type="submit" class="btn btn-warning">search</button>
+                </form>
+                <div class="col-sm-12" style="color: #ff0000">
+                    @TempData["WrongData"]
+                </div>
+            </div>
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>

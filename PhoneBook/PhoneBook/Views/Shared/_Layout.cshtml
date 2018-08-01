@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @Html.Partial("_Banner")
+    @Html.Partial("_Nav")
+    <div class="text-center d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main">
+            @RenderBody()
+        </main>
+        @Html.Partial("_Footer")
+    </div>
+</body>
+</html>
